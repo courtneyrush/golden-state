@@ -1,0 +1,110 @@
+/* =============================================
+    START _nav.scss
+ ============================================= */
+
+nav{
+  width: 100%;
+  background: #3b3b39;
+  position: relative;
+
+  .button {
+    color: #fff;
+    display: inline-block;
+    padding: 0 13px;
+
+
+
+    &.selected {
+      color: $orange;
+    }
+
+    &:hover{
+      text-decoration: none;
+      color: lighten( $orange, 7% );
+
+    }
+
+    @include breakpoint(phablet) {
+      padding: 0;
+      border-right: 1px solid #fff;
+      display: inline-block;
+      width: 31.7%;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    @include breakpoint(mobileonly) {
+      font-size: rem(13);
+    }
+
+  }
+
+}
+
+.navigation-btns {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 55px;
+  line-height: 55px;
+  padding-right: 13px;
+
+  @include breakpoint(phablet) {
+    display: block;
+    position: initial;
+    text-align: center;
+    padding: 0;
+    background: #484848;
+  }
+
+}
+
+.logo {
+  padding: 8px 0 0 15px;
+  height: 45px;
+  max-width: 100px;
+  position: absolute;
+}
+
+.header-school-name{
+
+  color: #fff;
+  font: 500 rem(20) 'quicksand-light';
+  display: inline-block;
+  height: 55px;
+  vertical-align: top;
+  line-height: 55px;
+  margin-left: 79px;
+  
+
+  @include breakpoint(mobileonly) {
+    margin-left: 72px;
+    text-align: center;
+  }
+
+  .technology-institute {
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+  } /* End of .technology-institute */
+
+}
+
+.return-home {
+
+  @include breakpoint(tablet) {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  @include breakpoint(mobileonly) {
+    font-size: rem(12);
+  }
+}

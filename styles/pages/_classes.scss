@@ -1,0 +1,146 @@
+/* =============================================
+    START _classes.scss
+ ============================================= */
+
+.classes-bg {
+  background: url("../images/classes-hero.png") no-repeat top center;
+  background-size: 1440px 980px;
+  height: 915px;
+
+//  @include breakpoint(desktop) {
+//    height: 593px;
+//    background-size: 100.3% 114%;
+//  }
+//
+//  @include breakpoint(laptop) {
+//    height: 538px;
+//    background-size: 100.3% 104%;
+//  }
+//
+  @include breakpoint(phablet) {
+    display: none;
+  }
+}
+
+.classes-quote {
+  text-align: right;
+  font-size: rem(30);
+  margin: 30px 0 0;
+
+  @include breakpoint(desktop) {
+    font-size: rem(25);
+  }
+
+  cite {
+    font-size: rem(20);
+  }
+}
+
+.classes-content-box {
+
+  .greeting {
+    padding-top: 232px;
+    max-width: 1049px;
+
+    h1 {
+      text-align: right;
+      font-size: rem(44);
+      color: $monkRobeRed;
+
+      @include breakpoint(desktop) {
+        font-size: rem(34);
+      }
+    }
+  } /* END .greeting */
+
+  .features {
+    background: #fff;
+    margin: -86px 0 0 0;
+
+    @include breakpoint(phablet) {
+      margin: 0;
+    }
+
+    &.initial {
+      position: initial;
+    }
+
+    .class-free {
+      background: url("../images/paisley-maroon.png") repeat top center;
+      color: $orange;
+      text-align: center;
+      font: 800 rem(24) "Montserrat";
+      padding: 24px 0 27px 0;
+    }
+
+    .email-us-link {
+      color: #fff;
+      display: block;
+      font: 500 rem(13) 'quicksand-light';
+
+      a {
+        text-decoration: underline;
+        color: #fff;
+      }
+
+    }
+
+    .join-us {
+      font: 800 rem(34) 'quicksand-bold';
+      margin: 32px 0 0 0;
+
+      @include breakpoint(mobileonly) {
+        font-size: rem(30);
+      }
+    }
+
+
+  } /* END of .features */
+
+  .wrapper {
+
+    overflow: inherit;
+    max-width: 980px;
+    padding-bottom: 45px;
+
+    @include breakpoint(laptop) {
+      width: 86%;
+    }
+
+    p {
+      line-height: 22px;
+    }
+  }
+
+  .lesson {
+    display: inline-block;
+    width: 275px;
+    margin: 15px;
+    float: left;
+    height: 143px;
+
+    @include breakpoint(phablet) {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      height: auto;
+    }
+
+    h3 {
+      font: 800 rem(22) 'quicksand-bold';
+      margin-bottom: 5px;
+    }
+
+    h4 {
+      font: 800 rem(16) 'quicksand-regular';
+      color: $orange;
+      margin-bottom: 10px;
+    }
+
+    ul li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+} /* END of .classes-content-box */
+

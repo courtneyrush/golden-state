@@ -1,0 +1,56 @@
+/* =============================================
+    START _documents.scss
+    terms, policy
+ ============================================= */
+
+.docs-content {
+
+  h1 {
+    font-size: rem(40);
+  }
+
+  width: 70%;
+  margin: 40px auto;
+
+  @include breakpoint(laptop) {
+    width: 85%;
+  }
+
+  .numbered-items {
+    list-style-position: inside;
+    padding-left: 15px;
+
+    li {
+      height: 20px;
+
+      @include breakpoint(phablet) {
+        height: auto;
+        white-space: nowrap;
+      }
+
+      a {
+        @include breakpoint(phablet) {
+          height: auto;
+          margin-bottom: 16px;
+          white-space: normal;
+        }
+      }
+
+    }
+
+  }
+}
+
+/* Information section in the terms page at the bottom */
+
+.contact-info dt, .contact-info dd {
+  display: inline-block;
+}
+
+.contact-info dt {
+  width: 70px;
+}
+
+.contact-info dt:first-child {
+  width: auto;
+}

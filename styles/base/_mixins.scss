@@ -1,0 +1,114 @@
+/***************************************************
+*  This file contains ALL variables for colors, widths, etc
+*  As well as the different functions and mixins for the Whole site.
+*  DO NOT add anything different.
+*  Author: Sandra Velandia
+*  Date: 5/31/2014
+* START MIXINS
+****************************************************/
+
+// NOTE: if you need to add a function or mixin,
+//please keep in mind this: http://thesassway.com/advanced/pure-sass-functions
+// And this: http://thesassway.com/advanced
+
+/* ========== Variables ================== */
+
+$monkRobeRed: #7f1e18;
+$orange: #DA7C04;
+$browser-context: 16; /* browser font size default */
+$list: -webkit-, -moz-, -ms-, -o-, '';
+
+
+
+
+  /* ========== Funcitons ================== */
+
+/* convert pixels to rem */
+@function rem($pixels, $context:$browser-context){ // ->->->->->->->->->->->  USE THIS ALWAYS WITH THE FONT: PROPERTY
+  @return #{$pixels/$context}rem
+}
+
+
+
+/* ========== Mixins ================== */
+
+@mixin font-size($pixels){   //  ->->->->->->->->->->->->->->->->->-> USE THIS ALWAYS INSTEAD OF FONT-SIZE: PROPERTY
+  font-size: $pixels + px; //fallback for old browsers
+  font-size: ($pixels/$browser-context) + rem;
+}
+
+@mixin line-height($heightValue: 16 ){
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin css3($property, $value) {   //  ->->->->->->->->->->->->->->->->  USE THIS ALWAYS FOR WRITING CSS3 STYLES
+  @each $prefix in $list {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* ################# USE THE FOLLOWING FOR CHANGING COLORS: LIGHTEN, DARKEN, HUE, BRIGHTNESS, ETC. ####### */
+
+//  darken( $variable-color-name, 10% )
+//  lighten( $variable-color-name, 10% )
+//  saturate( $variable-color-name, 20% )
+//  desaturate( $variable-color-name, 20% )
+//  adjust-hue( $variable-color-name, 20% )
+//  rgba( $variable-color-name, .7 )  // Adding Alpha transparency
+//  tint( $variable-color-name, 10% )
+//  shade( $variable-color-name, 10% )
+
+// EXAMPLES:
+
+//   border: 1px solid darken($variable-color-name, 20%);
+//   text-shadow: 0 -1px 0 darken($variable-color-name, 10%);
+//   @include box-shadow(inset 0 1px 0 lighten($variable-color-name, 20%));
+
+// Additionally, check this other deffault functions for manipulating other things: http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+/* ################# END ############################################## */
+
+/********************************************************************************************************************
+*
+*         RESPONSIVE DESIGN BREAKPOINTS  !!!!!! USE ALWAYS WHEN NEEDING MEDIA QUERY STYLES !!!!!!!
+*
+********************************************************************************************************************/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 1200px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: 1000px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 800px) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (max-width: 600px)  { @content ; }
+  }
+
+  @else if $point == mobileonly {
+    @media (max-width: 500px)  { @content ; }
+
+  }
+}
+
+// Example of the mixin above:
+//.header-school-name {
+//  width: 100%;
+//  @include breakpoint(phablet) {
+//    width: 50%;
+//  }
+//  @include breakpoint(laptop) {
+//    width: 25%;
+//  }
+//}

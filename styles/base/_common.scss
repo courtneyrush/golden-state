@@ -1,0 +1,240 @@
+/* =============================================
+    START _common.scss
+    contains reset.css, font imports, tag styles
+ ============================================= */
+
+/* RESET.CSS */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+img{
+  max-width: 83%;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  color: #ffffff;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+/* END RESET.CSS */
+
+/*  Fonts  */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat-Bold'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/IQHow_FEYlDC4Gzy_m8fcnbFhgvWbfSbdVg11QabG8w.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'quicksand-regular';
+  src: url('./fonts/Quicksand-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'quicksand-bold';
+  src: url('./fonts/Quicksand-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'quicksand-light';
+  src: url('./fonts/Quicksand-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* End Fonts */
+
+::selection {color:#ffffff;background:#353434;}
+::-moz-selection {color:#ffffff;background:#353434;}
+
+.feature a,
+.cta a.cta_btn,
+.testimonials #t_navigation a,
+header ul.social li a,
+header nav ul li a{
+  transition:all .2s linear;
+  -webkit-transition:all .2s linear;
+  -moz-transition:all .2s linear;
+  -o-transition:all .2s linear;
+}
+
+body{
+  font-family: 'quicksand-Regular';
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: $monkRobeRed;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+h1, h2, h3 {
+  color: $monkRobeRed;
+}
+
+h1{
+  font-size:55px; /* fallback for IE browser */
+  font: 500 rem(55) 'Montserrat';
+}
+
+h2{
+  font: 500 rem(24) 'quicksand-regular';
+}
+
+h3 {
+  margin: 15px 0;
+}
+
+.main-heading {
+  margin: 20px 0;
+}
+
+ol,li {
+  margin: 0;
+  padding: 0;
+}
+
+//ol {
+//  counter-reset: foo;
+//  display: table;
+//}
+//
+//li {
+//  list-style: none;
+//  counter-increment: foo;
+//  display: table-row;
+//}
+
+//li::before {
+//  content: counter(foo) ".";
+//  display: table-cell;
+//  text-align: right;
+//  padding-right: .3em;
+//}
+
+p{
+  margin: 15px 0;
+}
+
+

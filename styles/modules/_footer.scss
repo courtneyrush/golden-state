@@ -1,0 +1,109 @@
+/* =============================================
+    START _footer.scss
+ ============================================= */
+
+
+footer{
+  padding: 20px 0 50px 0;
+  border-top: 1px #dedede solid;
+  background: url("../images/paisley-gray.png") repeat top center;
+  text-align: center;
+
+  .sign-up-phrase {
+    color: #8D8D8D;
+  }
+
+}
+
+.footer-sign-up {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  text-align: left;
+
+  @include breakpoint(tablet) {
+    height: 40px;
+  }
+
+  .logo {
+    max-width: 10%;
+  }
+
+}
+
+.footer-logo{
+
+  h4 {  // the golden state tech header
+
+    margin-left: 45px;
+
+    @include breakpoint(mobileonly) {
+      font-size: rem(14);
+      line-height: 55px;
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+}
+
+.footer-links {
+  margin: 60px auto 0 auto;
+  color: #FFF;
+
+  @include breakpoint(mobileonly) {
+    font-size: rem(11);
+  }
+
+}
+
+.footer-copyright {
+  padding-right: 16px;
+  color: #8D8D8D;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
+
+}
+
+.footer-links {
+
+  @include breakpoint(tablet) {
+    font-size: rem(13);
+  }
+
+  p {
+    margin: 0 0 12px 0;
+  }
+
+  a {
+    border-left: 1px solid #fff;
+    padding: 0 20px;
+    color: #fff;
+
+    &:first-child {
+      border-left: none;
+      margin-left: 20px;
+    }
+
+    @include breakpoint(tablet) {
+      margin: 10px 0;
+    }
+  }
+
+  .privacy-link {
+    @include breakpoint(tablet) {
+      border-left: 1px solid transparent;
+    }
+  }
+
+}
+
+.footer-signup-width-modifier {
+  max-width: 980px;
+  margin: 0 auto;
+}

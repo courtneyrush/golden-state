@@ -1,0 +1,77 @@
+/* =============================================
+    START _sign-up.scss
+ ============================================= */
+
+/*  greeting  and Sign Up Area */
+
+.sign-up-wrapper {
+  width: 60%;
+  margin: 32px auto 0 auto;
+  text-align: left;
+
+  @include breakpoint(laptop) {
+    width: 84%;
+  }
+
+}
+
+.sign-up-wrapper .email {
+  font: 800 rem(21) 'quicksand-regular';
+  height: 40px;
+  box-shadow: none;
+  border: 2px solid #C0C0C0;
+  width: 64%;
+  margin-right: 10px;
+  padding-left: 8px;
+  @include border-radius(2px);
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @include breakpoint(mobileonly) {
+    font-size: rem(16);
+  }
+}
+
+.signup-button {
+  @include border-radius(2px);
+  background: $orange;
+  font: 800 rem(17) 'quicksand-regular';
+  color: #FFF;
+  cursor: pointer;
+  width: 31%;
+  height: 40px;
+  border: none;
+
+  &:hover {
+    background: lighten( $orange, 5% );
+  }
+
+  @include breakpoint(tablet) {
+    margin: 20px auto 0 auto;
+    display: block;
+    width: 100%;
+  }
+
+}
+
+.sign-up-phrase {
+  font: 300 rem(16) 'quicksand-bold';
+  width: 100%;
+  margin-top: 8px;
+  color: #000;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    font-size: rem(16);
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  @include breakpoint(mobileonly) {
+    font-size: rem(15);
+    margin: 10px auto;
+  }
+}

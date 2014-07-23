@@ -1,0 +1,21 @@
+/* =============================================
+    START _main.scss
+ ============================================= */
+// bower:scss  SASS
+@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// end bower
+
+@import 'base/mixins';
+@import 'base/common';
+@import 'base/layout';
+
+
+@import 'modules/footer';
+@import 'modules/nav';
+@import 'modules/sign-up';
+
+
+@import 'pages/landing';
+@import 'pages/contact';
+@import 'pages/classes';
+@import 'pages/documents';
